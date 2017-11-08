@@ -16,7 +16,7 @@ import org.junit.Test;
  */
 public class IndexManager {
 
-	private String serverUrl = "http://192.168.1.4:8080/solr/core1";
+	private String serverUrl = "http://127.0.0.1:8080/solr/core1";
 	/**
 	 * 增加与修改<br>
 	 * 增加与修改其实是一回事，只要id不存在，则增加，如果id存在，则是修改
@@ -59,7 +59,7 @@ public class IndexManager {
 		client.deleteById("zxj1");
 		
 		//2.删除多个
-		List<String> ids = new ArrayList<>();
+		List<String> ids = new ArrayList<String>();
 		ids.add("1");
 		ids.add("2");
 		client.deleteById(ids);
